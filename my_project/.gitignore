@@ -1,0 +1,10 @@
+# Anamnesis build artifacts
+build/
+dist/
+*.pyc
+__pycache__/
+.Python
+*.egg-info/
+.DS_Store
+.env
+venv/

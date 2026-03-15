@@ -1,0 +1,4 @@
+name: "Python Basics"
+description: "Learn Python fundamentals"
+depends_on:
+  - getting_started
