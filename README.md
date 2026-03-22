@@ -2,6 +2,8 @@
 
 This is an example demo project showcasing the **open-anamnesis** CLI tool.
 
+This project build a static website which can be viewed here: https://erenmirza.github.io/open-anamnesis-example/
+
 ## Prerequisites
 
 - Python 3.7 or higher
