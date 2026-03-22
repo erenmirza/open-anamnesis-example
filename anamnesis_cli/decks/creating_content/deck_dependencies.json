@@ -1,0 +1,5 @@
+{
+  "display_name": "Deck Dependencies",
+  "front": "How do deck dependencies work?",
+  "back": "Decks can depend on multiple other decks using depends_on in _deck.yml. Dependencies must reference existing deck IDs. Decks are automatically sorted topologically - dependencies appear before dependents in all views."
+}

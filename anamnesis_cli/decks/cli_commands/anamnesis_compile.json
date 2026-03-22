@@ -1,0 +1,5 @@
+{
+  "display_name": "anamnesis compile",
+  "front": "What does 'anamnesis compile' do?",
+  "back": "Validates all YAML and JSON files, checks required fields, verifies character limits, validates dependencies, and ensures unique card IDs. Use -d flag to specify project directory."
+}

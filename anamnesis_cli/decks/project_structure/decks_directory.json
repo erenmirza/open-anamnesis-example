@@ -1,0 +1,5 @@
+{
+  "display_name": "decks/ Directory",
+  "front": "What is the decks/ directory?",
+  "back": "Contains all deck folders. Each deck is a subdirectory with _deck.yml and card files (.json and .yml pairs)."
+}

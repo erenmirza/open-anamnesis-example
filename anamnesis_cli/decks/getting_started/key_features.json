@@ -1,0 +1,5 @@
+{
+  "display_name": "Key Features",
+  "front": "What are the key features of Anamnesis?",
+  "back": "Dependency management with topological sorting, YAML/JSON validation, interactive lineage graphs, auto-generated web interface with Learn and Test modes, and flashcards-as-code for version control."
+}

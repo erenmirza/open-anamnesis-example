@@ -1,0 +1,5 @@
+{
+  "display_name": "Card JSON File",
+  "front": "What goes in a card .json file?",
+  "back": "display_name (max 60 chars), front (question, max 200 chars), and back (answer, max 500 chars). The filename becomes the card ID."
+}

@@ -1,0 +1,5 @@
+{
+  "display_name": "Deck Size Limits",
+  "front": "What are the size limits for decks?",
+  "back": "Each deck can contain a maximum of 9 cards. There is no limit on the number of decks in a project. This constraint ensures decks remain focused and manageable."
+}

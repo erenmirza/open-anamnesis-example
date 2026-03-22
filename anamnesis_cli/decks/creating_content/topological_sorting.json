@@ -1,0 +1,5 @@
+{
+  "display_name": "Topological Sorting",
+  "front": "How does Anamnesis order decks and cards?",
+  "back": "Both decks and cards are automatically sorted topologically based on dependencies. Dependencies always appear before their dependents, ensuring a logical learning progression from foundational to advanced concepts."
+}

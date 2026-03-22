@@ -1,0 +1,3 @@
+display_name: "Project Structure"
+description: "Understanding the project file organization"
+depends_on: ["cli_commands"]

@@ -1,0 +1,5 @@
+{
+  "display_name": "_project.yml",
+  "front": "What is _project.yml?",
+  "back": "The root configuration file containing project metadata: name, description, and version. Required in every Anamnesis project. Note: Uses underscore prefix to distinguish it from other files."
+}

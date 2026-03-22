@@ -1,0 +1,5 @@
+{
+  "display_name": "Card YML File",
+  "front": "What goes in a card .yml file?",
+  "back": "depends_on: single card ID or null. Each card can depend on only one other card in the same deck. One card per deck must have null (the first card)."
+}

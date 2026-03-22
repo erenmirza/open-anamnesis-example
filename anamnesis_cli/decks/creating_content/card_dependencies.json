@@ -1,0 +1,5 @@
+{
+  "display_name": "Card Dependencies",
+  "front": "How do card dependencies work?",
+  "back": "Each card depends on exactly one other card in the same deck, or null for the first card. Cards cannot reference cards in other decks."
+}

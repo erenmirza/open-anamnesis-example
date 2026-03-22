@@ -1,0 +1,5 @@
+{
+  "display_name": "_deck.yml File",
+  "front": "What goes in a _deck.yml file?",
+  "back": "display_name (human-readable deck name), description (deck summary), and depends_on (list of prerequisite deck IDs). Every deck must have this file."
+}

@@ -1,0 +1,5 @@
+{
+  "display_name": "Validation Rules",
+  "front": "What validation does Anamnesis perform?",
+  "back": "Checks: valid YAML/JSON syntax, required fields present, character limits (display_name: 60, front: 200, back: 500), unique card IDs, valid dependencies, exactly one first card per deck, maximum 9 cards per deck, no circular dependencies."
+}

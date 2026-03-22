@@ -1,0 +1,207 @@
+{
+  "project": {
+    "name": "Anamnesis CLI Guide",
+    "description": "Learn how to use the Anamnesis flashcard tool",
+    "version": "1.0.0"
+  },
+  "decks": [
+    {
+      "id": "cli_commands",
+      "metadata": {
+        "id": "cli_commands",
+        "name": "CLI Commands",
+        "description": "Learn the command-line interface commands",
+        "depends_on": [
+          "getting_started"
+        ],
+        "card_count": 3
+      },
+      "cards": [
+        {
+          "display_name": "anamnesis build",
+          "front": "What does 'anamnesis build' do?",
+          "back": "Validates the project, generates the web interface, and starts a local server (default port 5000). Use -p to specify port and -d for project directory.",
+          "id": "anamnesis_build",
+          "depends_on": "anamnesis_compile"
+        },
+        {
+          "display_name": "anamnesis compile",
+          "front": "What does 'anamnesis compile' do?",
+          "back": "Validates all YAML and JSON files, checks required fields, verifies character limits, validates dependencies, and ensures unique card IDs. Use -d flag to specify project directory.",
+          "id": "anamnesis_compile",
+          "depends_on": "anamnesis_init"
+        },
+        {
+          "display_name": "anamnesis init",
+          "front": "What does 'anamnesis init [PROJECT_NAME]' do?",
+          "back": "Creates a new Anamnesis project with the specified name. Sets up directories (decks/, build/), creates _project.yml, .gitignore, and an example deck with getting_started content.",
+          "id": "anamnesis_init",
+          "depends_on": null
+        }
+      ]
+    },
+    {
+      "id": "creating_content",
+      "metadata": {
+        "id": "creating_content",
+        "name": "Creating Content",
+        "description": "Learn how to create decks and cards",
+        "depends_on": [
+          "project_structure"
+        ],
+        "card_count": 9
+      },
+      "cards": [
+        {
+          "display_name": "Card Dependencies",
+          "front": "How do card dependencies work?",
+          "back": "Each card depends on exactly one other card in the same deck, or null for the first card. Cards cannot reference cards in other decks.",
+          "id": "card_dependencies",
+          "depends_on": "deck_dependencies"
+        },
+        {
+          "display_name": "Card JSON File",
+          "front": "What goes in a card .json file?",
+          "back": "display_name (max 60 chars), front (question, max 200 chars), and back (answer, max 500 chars). The filename becomes the card ID.",
+          "id": "card_json_file",
+          "depends_on": "deck_yml_file"
+        },
+        {
+          "display_name": "Card YML File",
+          "front": "What goes in a card .yml file?",
+          "back": "depends_on: single card ID or null. Each card can depend on only one other card in the same deck. One card per deck must have null (the first card).",
+          "id": "card_yml_file",
+          "depends_on": "card_json_file"
+        },
+        {
+          "display_name": "Deck Dependencies",
+          "front": "How do deck dependencies work?",
+          "back": "Decks can depend on multiple other decks using depends_on in _deck.yml. Dependencies must reference existing deck IDs. Decks are automatically sorted topologically - dependencies appear before dependents in all views.",
+          "id": "deck_dependencies",
+          "depends_on": "card_yml_file"
+        },
+        {
+          "display_name": "Deck Size Limits",
+          "front": "What are the size limits for decks?",
+          "back": "Each deck can contain a maximum of 9 cards. There is no limit on the number of decks in a project. This constraint ensures decks remain focused and manageable.",
+          "id": "deck_size_limits",
+          "depends_on": "validation_rules"
+        },
+        {
+          "display_name": "_deck.yml File",
+          "front": "What goes in a _deck.yml file?",
+          "back": "display_name (human-readable deck name), description (deck summary), and depends_on (list of prerequisite deck IDs). Every deck must have this file.",
+          "id": "deck_yml_file",
+          "depends_on": null
+        },
+        {
+          "display_name": "Lineage Visualization",
+          "front": "What is the lineage view?",
+          "back": "A horizontal graph showing deck dependencies flowing left-to-right. Dependencies appear on the left, the current deck in the middle, and dependents on the right. Click nodes to navigate, drag to pan the graph.",
+          "id": "lineage_visualization",
+          "depends_on": "topological_sorting"
+        },
+        {
+          "display_name": "Topological Sorting",
+          "front": "How does Anamnesis order decks and cards?",
+          "back": "Both decks and cards are automatically sorted topologically based on dependencies. Dependencies always appear before their dependents, ensuring a logical learning progression from foundational to advanced concepts.",
+          "id": "topological_sorting",
+          "depends_on": "deck_dependencies"
+        },
+        {
+          "display_name": "Validation Rules",
+          "front": "What validation does Anamnesis perform?",
+          "back": "Checks: valid YAML/JSON syntax, required fields present, character limits (display_name: 60, front: 200, back: 500), unique card IDs, valid dependencies, exactly one first card per deck, maximum 9 cards per deck, no circular dependencies.",
+          "id": "validation_rules",
+          "depends_on": "card_dependencies"
+        }
+      ]
+    },
+    {
+      "id": "getting_started",
+      "metadata": {
+        "id": "getting_started",
+        "name": "Getting Started",
+        "description": "Introduction to Anamnesis and basic concepts",
+        "depends_on": [],
+        "card_count": 3
+      },
+      "cards": [
+        {
+          "display_name": "How to Install",
+          "front": "How do you install Anamnesis?",
+          "back": "Install using pip: pip install open-anamnesis. This gives you access to the anamnesis, init, compile, and build commands.",
+          "id": "installation",
+          "depends_on": "what_is_anamnesis"
+        },
+        {
+          "display_name": "Key Features",
+          "front": "What are the key features of Anamnesis?",
+          "back": "Dependency management with topological sorting, YAML/JSON validation, interactive lineage graphs, auto-generated web interface with Learn and Test modes, and flashcards-as-code for version control.",
+          "id": "key_features",
+          "depends_on": "installation"
+        },
+        {
+          "display_name": "What is Anamnesis?",
+          "front": "What is Anamnesis?",
+          "back": "Anamnesis is an open-source CLI tool for creating and managing flashcard projects as code. It provides dependency management, validation, and a web-based learning interface.",
+          "id": "what_is_anamnesis",
+          "depends_on": null
+        }
+      ]
+    },
+    {
+      "id": "project_structure",
+      "metadata": {
+        "id": "project_structure",
+        "name": "Project Structure",
+        "description": "Understanding the project file organization",
+        "depends_on": [
+          "cli_commands"
+        ],
+        "card_count": 3
+      },
+      "cards": [
+        {
+          "display_name": "build/ Directory",
+          "front": "What is the build/ directory?",
+          "back": "Contains generated files: manifest.json, index.html, and static/ folder with CSS and JavaScript. Created automatically by anamnesis build.",
+          "id": "build_directory",
+          "depends_on": "decks_directory"
+        },
+        {
+          "display_name": "decks/ Directory",
+          "front": "What is the decks/ directory?",
+          "back": "Contains all deck folders. Each deck is a subdirectory with _deck.yml and card files (.json and .yml pairs).",
+          "id": "decks_directory",
+          "depends_on": "project_yml"
+        },
+        {
+          "display_name": "_project.yml",
+          "front": "What is _project.yml?",
+          "back": "The root configuration file containing project metadata: name, description, and version. Required in every Anamnesis project. Note: Uses underscore prefix to distinguish it from other files.",
+          "id": "project_yml",
+          "depends_on": null
+        }
+      ]
+    }
+  ],
+  "deck_order": [
+    "getting_started",
+    "cli_commands",
+    "project_structure",
+    "creating_content"
+  ],
+  "dependency_graph": {
+    "cli_commands": [
+      "getting_started"
+    ],
+    "creating_content": [
+      "project_structure"
+    ],
+    "getting_started": [],
+    "project_structure": [
+      "cli_commands"
+    ]
+  }
+}

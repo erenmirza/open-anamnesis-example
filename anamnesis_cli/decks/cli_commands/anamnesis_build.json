@@ -1,0 +1,5 @@
+{
+  "display_name": "anamnesis build",
+  "front": "What does 'anamnesis build' do?",
+  "back": "Validates the project, generates the web interface, and starts a local server (default port 5000). Use -p to specify port and -d for project directory."
+}

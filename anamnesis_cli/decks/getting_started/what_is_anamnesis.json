@@ -1,0 +1,5 @@
+{
+  "display_name": "What is Anamnesis?",
+  "front": "What is Anamnesis?",
+  "back": "Anamnesis is an open-source CLI tool for creating and managing flashcard projects as code. It provides dependency management, validation, and a web-based learning interface."
+}

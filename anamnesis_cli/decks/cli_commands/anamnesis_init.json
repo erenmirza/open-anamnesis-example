@@ -1,0 +1,5 @@
+{
+  "display_name": "anamnesis init",
+  "front": "What does 'anamnesis init [PROJECT_NAME]' do?",
+  "back": "Creates a new Anamnesis project with the specified name. Sets up directories (decks/, build/), creates _project.yml, .gitignore, and an example deck with getting_started content."
+}

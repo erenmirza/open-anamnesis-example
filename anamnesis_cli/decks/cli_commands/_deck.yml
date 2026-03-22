@@ -1,0 +1,3 @@
+display_name: "CLI Commands"
+description: "Learn the command-line interface commands"
+depends_on: ["getting_started"]

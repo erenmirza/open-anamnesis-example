@@ -1,0 +1,5 @@
+{
+  "display_name": "Lineage Visualization",
+  "front": "What is the lineage view?",
+  "back": "A horizontal graph showing deck dependencies flowing left-to-right. Dependencies appear on the left, the current deck in the middle, and dependents on the right. Click nodes to navigate, drag to pan the graph."
+}

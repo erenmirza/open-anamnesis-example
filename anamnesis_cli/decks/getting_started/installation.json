@@ -1,0 +1,5 @@
+{
+  "display_name": "How to Install",
+  "front": "How do you install Anamnesis?",
+  "back": "Install using pip: pip install open-anamnesis. This gives you access to the anamnesis, init, compile, and build commands."
+}

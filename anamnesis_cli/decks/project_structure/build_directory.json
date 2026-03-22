@@ -1,0 +1,5 @@
+{
+  "display_name": "build/ Directory",
+  "front": "What is the build/ directory?",
+  "back": "Contains generated files: manifest.json, index.html, and static/ folder with CSS and JavaScript. Created automatically by anamnesis build."
+}
